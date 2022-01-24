@@ -17,11 +17,21 @@ async function fetchDB(id) {
 
 // Object for produce items
 const items = {
+  /*
+
+  ====GetItems====
+
+  */
   getItems: async function () {
     const res = await fetch(`${process.env.VUE_APP_LOCALHOST}`);
     const data = await res.json();
     return data;
   },
+  /*
+  
+    ====AddItem====
+  
+    */
   addItem: async function (id, plu, name, quantity) {
     // Declaring all the variables
 
@@ -52,11 +62,17 @@ const items = {
     submittedToDB = true;
     return submittedToDB;
   },
+
+  /*
+  
+    ====removeItem====
+  
+    */
+
   removeItem: async function (id) {
     let submittedToDB = false;
     // Call the fetchDB function to check if the id already exists
     const duplicate = await fetchDB(id);
- 
 
     // Check if the id is not a duplicate
     if (!duplicate) {
@@ -78,5 +94,35 @@ const items = {
     submittedToDB = true;
     return submittedToDB;
   },
+  /*
+ 
+  ====updateitems====
+  
+  */
+  updateItem: async function (id, quantity) {
+    let submittedToDB = false;
+    // Call the fetchDB function to check if the id already exists
+    const duplicate = await fetchDB(id);
+
+    // Check if the id is not a duplicate
+    if (!duplicate) {
+      // Return false (no match)
+      submittedToDB = false;
+      return submittedToDB;
+    }
+
+    await fetch(`${process.env.VUE_APP_LOCALHOST}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        quantity: quantity,
+      }),
+    });
+
+    return true;
+  },
 };
+
 module.exports = items;
