@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "plu": 1,
+      "itemName": "1",
+      "quantity": 1
+    },
+    {
+      "id": 3002,
+      "plu": 3002,
+      "itemName": "Cortland Apples",
+      "quantity": 27
+    },
+    {
+      "id": 3283,
+      "plu": 3283,
+      "itemName": "Honeycrisp Apple",
+      "quantity": 100
+    },
+    {
+      "id": 3037,
+      "plu": 3037,
+      "itemName": "Pineapple",
+      "quantity": 40
+    },
+    {
+      "id": 3113,
+      "plu": 3113,
+      "itemName": "White Flesh Peach",
+      "quantity": 34
+    },
+    {
+      "id": 93113,
+      "plu": 93113,
+      "itemName": "Organic Yellow Flesh Peach",
+      "quantity": 50
+    }
+  ]
+}

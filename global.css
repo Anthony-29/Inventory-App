@@ -1,0 +1,95 @@
+/* NAV */
+#nav {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#nav .nav-links {
+  background-color: #2E35C0;
+  border: 1px solid rgb(252, 252, 252);
+  color: white;
+  padding: 15px 32px;
+  margin: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#nav .nav-links:hover {
+  background-color: #3c45fd;
+}
+
+/* HEADER */
+h1.header {
+  text-align: center;
+  margin: 40px auto;
+}
+
+/* FORMS */
+.form-wrapper {
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #2E35C0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3c45fd;
+}
+
+/* 
+<script>
+// @ is an alias to /src
+
+const items = require("../../fetchItems");
+
+export default {
+  name: "Home",
+  data() {
+    return {
+      link: process.env.VUE_APP_LOCALHOST,
+      arr: [],
+    };
+  },
+  components: {},
+  methods: {},
+  async created() {
+    this.arr = await items.getItems();
+  },
+};
+</script>
+ */
+
+/* Media Queries */
+@media only screen and (max-width: 700px) {
+  #nav .nav-links {
+    margin: 5px 5px;
+    padding: 10px 10px;
+  }
+}
