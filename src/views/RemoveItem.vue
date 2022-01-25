@@ -32,7 +32,7 @@ import Header from "../components/Header";
 import PopUpMsg from "../components/PopUpMsg";
 
 export default {
-  name: "Remove",
+  name: "RemoveItem",
   components: {
     Header,
     PopUpMsg,

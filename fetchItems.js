@@ -123,6 +123,30 @@ const items = {
 
     return true;
   },
+  searchItem: async function (id) {
+    let submittedToDB = false;
+    // Call the fetchDB function to check if the id already exists
+    const duplicate = await fetchDB(id);
+
+    // Check if the id is not a duplicate
+    if (!duplicate) {
+      // Return false (no match)
+      submittedToDB = false;
+      return submittedToDB;
+    }
+
+    const res = await fetch(`${process.env.VUE_APP_LOCALHOST}/${id}`);
+    const data = await res.json()
+
+    submittedToDB = true
+
+    const itemInfo = {
+      item: data,
+      submittedToDB: submittedToDB
+    }
+
+    return itemInfo;
+  }
 };
 
 module.exports = items;

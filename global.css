@@ -2,20 +2,24 @@
 #nav {
   font-size: 2em;
   text-align: center;
-  margin: 20px auto;
+  margin: 50px auto;
+  
+  
 }
 
 #nav .nav-links {
-  background-color: #2E35C0;
+  background-color: #2e35c0;
   border: 1px solid rgb(252, 252, 252);
   color: white;
-  padding: 15px 32px;
+  padding: 10px 27px;
   margin: 0 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 0.7em;
   cursor: pointer;
+  border-radius: 10px;
+  
 }
 
 #nav .nav-links:hover {
@@ -26,6 +30,8 @@
 h1.header {
   text-align: center;
   margin: 40px auto;
+  font-size: 3.3em;
+  font-weight: bold;
 }
 
 /* FORMS */
@@ -34,6 +40,10 @@ h1.header {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+label{
+  font-size: 1.4em;
 }
 
 input[type="text"],
@@ -46,45 +56,24 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 1.3em;
 }
 
 input[type="submit"] {
   width: 100%;
-  background-color: #2E35C0;
+  background-color: #2e35c0;
   color: white;
-  padding: 14px 20px;
+  padding: 7px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 2em;
 }
 
 input[type="submit"]:hover {
   background-color: #3c45fd;
 }
-
-/* 
-<script>
-// @ is an alias to /src
-
-const items = require("../../fetchItems");
-
-export default {
-  name: "Home",
-  data() {
-    return {
-      link: process.env.VUE_APP_LOCALHOST,
-      arr: [],
-    };
-  },
-  components: {},
-  methods: {},
-  async created() {
-    this.arr = await items.getItems();
-  },
-};
-</script>
- */
 
 /* Media Queries */
 @media only screen and (max-width: 700px) {
