@@ -136,17 +136,17 @@ const items = {
     }
 
     const res = await fetch(`${process.env.VUE_APP_LOCALHOST}/${id}`);
-    const data = await res.json()
+    const data = await res.json();
 
-    submittedToDB = true
+    submittedToDB = true;
 
     const itemInfo = {
       item: data,
-      submittedToDB: submittedToDB
-    }
+      submittedToDB: submittedToDB,
+    };
 
     return itemInfo;
-  }
+  },
 };
 
 module.exports = items;
